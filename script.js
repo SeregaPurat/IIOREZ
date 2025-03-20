@@ -41,3 +41,16 @@ targetSection.scrollIntoView({
     duration: 800 
 });
 
+
+
+const fixesContainer = document.querySelector('.fixes-grid');
+const fixes = Array.from(document.querySelectorAll('.fix-post'));
+
+fixes.sort((a, b) => {
+    const dateA = new Date(a.querySelector('.post-date').textContent);
+    const dateB = new Date(b.querySelector('.post-date').textContent);
+    return dateB - dateA;
+});
+
+fixes.forEach(post => fixesContainer.appendChild(post));
+
