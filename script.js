@@ -38,7 +38,7 @@ targetSection.scrollIntoView({
     block: 'start',
    
     inline: 'nearest',
-    duration: 800 
+    duration: 801 
 });
 
 
